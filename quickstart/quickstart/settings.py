@@ -146,6 +146,20 @@ GRAPHQL_JWT = {
     ],
 }
 
+GRAPHQL_AUTH = {
+    'REGISTER_MUTATION_FIELDS' : [
+        # ...
+        'telephone',
+        'email',
+        'username',
+        'fonction'
+        ],
+    'LOGIN_ALLOWED_FIELDS': ['email', 'username'],
+}
+
+
+
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 AUTH_USER_MODEL = "users.CustomUser"

@@ -1,10 +1,10 @@
 # quickstart.schema.py
 
 import graphene
-
 from graphql_auth.schema import UserQuery, MeQuery
 from graphql_auth import mutations
-
+import graphql
+from graphql import GraphQLError
 
 class AuthMutation(graphene.ObjectType):
     register = mutations.Register.Field()
@@ -21,6 +21,7 @@ class AuthMutation(graphene.ObjectType):
     verify_secondary_email = mutations.VerifySecondaryEmail.Field()
     swap_emails = mutations.SwapEmails.Field()
 
+    
     # django-graphql-jwt authentication
     # with some extra features
     token_auth = mutations.ObtainJSONWebToken.Field()
