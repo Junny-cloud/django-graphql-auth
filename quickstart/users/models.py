@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
+    first_name = models.CharField(max_length=30, null=True, blank=True, verbose_name="first name")
     telephone = models.CharField(max_length=30, null=True, blank=True, verbose_name="Téléphone")
     fonction = models.CharField(max_length=200, null=True, blank=True, verbose_name="Fonction")
     entreprise = models.CharField(max_length=200, null=True, blank=True, verbose_name="Entreprise")

@@ -149,15 +149,14 @@ GRAPHQL_JWT = {
 GRAPHQL_AUTH = {
     'REGISTER_MUTATION_FIELDS' : [
         # ...
-        'telephone',
         'email',
-        'username',
-        'fonction'
+        'first_name',
+
         ],
-    'LOGIN_ALLOWED_FIELDS': ['email', 'username'],
+    'LOGIN_ALLOWED_FIELDS': ['email', 'password'],
 }
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
